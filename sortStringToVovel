@@ -1,0 +1,21 @@
+//First, print each vowel in n output like a i o o j v s c  r p t l p s 
+let n ='javascriptloops'.split('');
+let g = ['a','e','i','o','u'];
+let v = '';
+let c = '';
+for(let p of  n ){
+    let e = g.includes(p)
+    if(e){
+        v = [...v,p]
+    }else{
+        c =[...c,p]
+    }
+}
+
+v.push.apply(v,c)
+v.map((cdata,ckey)=>console.log(cdata))
+
+
+
+
+
