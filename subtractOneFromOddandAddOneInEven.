@@ -1,0 +1,21 @@
+// 369,717,922,625,434 if one is subtract from each odd digi and one is added to each even digit of each of the numbers what will be the diff. between the third digit and first digit of the highest number thus formate.
+
+let n = [369,717,922,625,434]
+let k =[];
+  n.map((nvalue,nkey)=>{
+    let n = String(nvalue).split('')
+    let t =[];
+    n.map((mvalue,mkey)=>{
+        if(mvalue % 2==0){
+            let y = Number(mvalue) + 1;
+             t = [...t,y]
+        }else{
+            let y = mvalue-1;
+             t = [...t,y]
+        }   
+    })
+    k = [...k,t.join('')]    
+}) 
+console.log(k);
+console.log(String(Math.max(...k.map(Number))).split('')[0]-String(Math.max(...k.map(Number))).split('')[2]);
+
